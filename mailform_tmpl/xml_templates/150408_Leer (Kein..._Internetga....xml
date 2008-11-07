@@ -1,0 +1,25 @@
+<phparray>
+	<xml_title>Leer (Keine Felder)</xml_title>
+	<xml_author>Internetgalerie (SW)</xml_author>
+	<xml_date type="integer">1208296510</xml_date>
+	<xml_description>Leer. Mit diesem Template setzen Sie die aktuelle Konfiguration zurück.</xml_description>
+	<xml type="array">
+		<mailform_forms type="array">
+		</mailform_forms>
+		<mailform_config type="array">
+			<numIndex index="0" type="array">
+				<field_config_colspan type="integer">1</field_config_colspan>
+				<field_config_rowspan type="integer">1</field_config_rowspan>
+				<field_config_colIndex type="integer">0</field_config_colIndex>
+				<field_config_rowIndex type="integer">0</field_config_rowIndex>
+				<field_config_cssclass>td-no-style</field_config_cssclass>
+				<field_config_width type="integer">0</field_config_width>
+				<field_config_height type="integer">0</field_config_height>
+				<field_config_page type="integer">0</field_config_page>
+				<field_config_placeholder_index type="boolean"></field_config_placeholder_index>
+				<field_config_form_keys></field_config_form_keys>
+			</numIndex>
+		</mailform_config>
+	</xml>
+	<xml_uid type="integer">39</xml_uid>
+</phparray>

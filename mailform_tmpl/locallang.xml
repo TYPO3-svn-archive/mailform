@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+  <meta type="array">
+    <description>Labels for various backend wizards (TCEforms; forms-, table-, colorpicker wizards for example.)</description>
+    <type>module</type>
+  </meta>
+  <data type="array">
+    <languageKey index="default" type="array">
+      <label index="functions_wiz_mailform_tmpl">Templates Wizard</label>
+      <label index="xml_form_title">Template Titel</label>
+      <label index="xml_form_author">Author</label>
+      <label index="xml_form_date">Date</label>
+      <label index="xml_form_description">Description</label>
+      <label index="xml_form_xml">XML</label>
+      <label index="xml_form_send">Save</label>
+      <label index="xml_form_reset">Reset</label>
+      <label index="xml_form_saveFolder">Folder</label>
+      <label index="xml_form_default">Set Defaults</label>
+      <label index="xml_saved">Template saved</label>
+      <label index="xml_save_error_author">You have to enter an author name</label>
+      <label index="xml_save_error_author">You have to enter a description</label>
+      <label index="confirm_change_xml">Do you really want to replace the current configuration with this template? All data and saved mails will be lost inreversible on this server!</label>
+      <label index="settings_history_enable">Enable version history</label>
+      <label index="settings_history_savedtimes">Times saved backwards</label>
+      <label index="history_backup_date">Backup date</label>
+      <label index="error_settings_history_savedtimes">You have to provide an integer bigger than zero.</label>
+      <label index="save_current_configuration">Save the current configuration in a XML</label>
+      <label index="list_all_templates">List all existing templates</label>
+      <label index="settings">Settings</label>
+      <label index="xml_standard_template_root">XML Standard Template Root</label>
+      <label index="xml_user_template_root">XML User Template Root</label>
+      <label index="error_path">The given Path is not valid</label>
+      <label index="error_dir">You should provide a directory</label>
+      <label index="extension_does_not_exist">The given Extension does not exist</label>
+    </languageKey>
+    <languageKey index="de" type="array">
+      <label index="functions_wiz_mailform_tmpl">Template Wizard</label>
+      <label index="xml_form_title">Template Titel</label>
+      <label index="xml_form_author">Autor</label>
+      <label index="xml_form_date">Datum</label>
+      <label index="xml_form_description">Beschreibung</label>
+      <label index="xml_form_xml">XML</label>
+      <label index="xml_form_send">Speichern</label>
+      <label index="xml_form_reset">Zurücksetzen</label>
+      <label index="xml_form_default">Setze Standardwerte</label>
+      <label index="xml_saved">Template gespeichert</label>
+      <label index="xml_save_error_author">Sie müssen einen Autor angeben</label>
+      <label index="xml_save_error_title">Sie müssen einen Titel angeben</label>
+      <label index="xml_save_error_desc">Sie müssen eine Beschreibung angeben</label>
+      <label index="confirm_change_xml">Wollen Sie wirklich die aktuelle Plugin-Konfiguration mit dem Template ersetzen? Alle Daten gehen hierbei verloren, unter Anderem können die Statistiken nicht mehr hervorgeholt werden.</label>
+      <label index="settings_history_enable">Erstelle Versions-History</label>
+      <label index="settings_history_savedtimes">Anzahl Schritte Rückwärs</label>
+      <label index="history_backup_date">Backup Datum</label>
+      <label index="error_settings_history_savedtimes">Sie müssen eine Zahl angeben die grösser als Null ist.</label>
+      <label index="save_current_configuration">Speichere die aktuelle Konfiguration in ein XML</label>
+      <label index="list_all_templates">Liste alle vorhandenen Templates</label>
+      <label index="settings">Einstellungen</label>
+      <label index="xml_standard_template_root">XML Standard Template Root</label>
+      <label index="xml_user_template_root">XML Benutzer Template Root</label>
+      <label index="error_path">Der Pfad ist ungültig</label>
+      <label index="error_dir">Sie müssen einen Ordner angeben</label>
+      <label index="extension_does_not_exist">Die Extension existiert nicht</label>
+      <label index="xml_form_saveFolder">Verzeichnis</label>
+     </languageKey>
+  </data>
+</T3locallang>

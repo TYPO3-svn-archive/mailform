@@ -1,0 +1,339 @@
+<phparray>
+	<xml_title>Contact Business / Private</xml_title>
+	<xml_author>Internetgalerie (SW)</xml_author>
+	<xml_date type="integer">1208296451</xml_date>
+	<xml_description>Contact Business / Private</xml_description>
+	<xml type="array">
+		<mailform_forms type="array">
+			<numIndex index="0" type="array">
+				<numIndex index="0" type="array">
+					<uName>FJG560BGU</uName>
+					<type>submit</type>
+					<label></label>
+					<input_field_value></input_field_value>
+				</numIndex>
+				<numIndex index="1" type="array">
+					<uName>FTJ081LQJ</uName>
+					<type>text</type>
+					<label>Email</label>
+					<required>on</required>
+					<validation_required_message>Eingabe fehlt</validation_required_message>
+					<input_field_value></input_field_value>
+					<input_form_cols>20</input_form_cols>
+					<validation_type>mail</validation_type>
+					<validation_error_message>Invalid email</validation_error_message>
+					<use_as_email_choose>user_recipient</use_as_email_choose>
+				</numIndex>
+				<numIndex index="2" type="array">
+					<uName>FGJ455ZGX</uName>
+					<type>text</type>
+					<label>Address</label>
+					<required>on</required>
+					<validation_required_message>Bitte geben Sie Ihre Adresse an.</validation_required_message>
+					<input_field_value></input_field_value>
+					<input_form_cols>15</input_form_cols>
+					<validation_type>no_validation</validation_type>
+					<validation_error_message>Falsche Eingabe</validation_error_message>
+					<use_as_email_choose>no_recipient</use_as_email_choose>
+				</numIndex>
+				<numIndex index="3" type="array">
+					<uName>FIS134JEE</uName>
+					<type>title</type>
+					<label>Business address</label>
+					<exclude_button_from_stats>on</exclude_button_from_stats>
+				</numIndex>
+				<numIndex index="4" type="array">
+					<uName>FOQ713HFG</uName>
+					<type>text</type>
+					<label>Title</label>
+					<validation_required_message>Eingabe fehlt</validation_required_message>
+					<input_field_value></input_field_value>
+					<input_form_cols>15</input_form_cols>
+					<validation_type>no_validation</validation_type>
+					<validation_error_message>Falsche Eingabe</validation_error_message>
+					<use_as_email_choose>no_recipient</use_as_email_choose>
+				</numIndex>
+				<numIndex index="5" type="array">
+					<uName>FDK199JWC</uName>
+					<type>text</type>
+					<label>ZIP</label>
+					<validation_required_message>Eingabe fehlt</validation_required_message>
+					<input_field_value></input_field_value>
+					<input_form_cols>10</input_form_cols>
+					<validation_type>numbers</validation_type>
+					<validation_error_message>Es sind nur Zahlen erlaubt</validation_error_message>
+					<use_as_email_choose>no_recipient</use_as_email_choose>
+				</numIndex>
+				<numIndex index="6" type="array">
+					<uName>FDW957LHR</uName>
+					<type>text</type>
+					<label>Place</label>
+					<required>on</required>
+					<validation_required_message>Bitte Ort angeben.</validation_required_message>
+					<input_field_value></input_field_value>
+					<input_form_cols>15</input_form_cols>
+					<validation_type>no_validation</validation_type>
+					<validation_error_message>Falsche Eingabe</validation_error_message>
+					<use_as_email_choose>no_recipient</use_as_email_choose>
+				</numIndex>
+				<numIndex index="7" type="array">
+					<uName>FWE890FFZ</uName>
+					<type>separator</type>
+					<label></label>
+					<validation_required_message>Eingabe fehlt</validation_required_message>
+				</numIndex>
+				<numIndex index="8" type="array">
+					<uName>FMB296KSW</uName>
+					<type>submit</type>
+					<label></label>
+					<input_field_value>Register</input_field_value>
+				</numIndex>
+				<numIndex index="9" type="array">
+					<uName>FLF291FUZ</uName>
+					<type>captcha</type>
+					<label></label>
+					<validation_required_message>Eingabe fehlt</validation_required_message>
+				</numIndex>
+				<numIndex index="10" type="array">
+					<uName>FWT525PBK</uName>
+					<type>title</type>
+					<label>File attachments</label>
+					<exclude_button_from_stats>on</exclude_button_from_stats>
+				</numIndex>
+				<numIndex index="11" type="array">
+					<uName>FHD951IVL</uName>
+					<type>file</type>
+					<label>Attach</label>
+					<validation_required_message>Eingabe fehlt</validation_required_message>
+					<input_field_cols>30</input_field_cols>
+					<forms_file_minfilesize>0</forms_file_minfilesize>
+					<validation_type>file</validation_type>
+					<forms_file_maxfilesize>4096</forms_file_maxfilesize>
+					<forms_file_denied_explicit_ext></forms_file_denied_explicit_ext>
+					<forms_file_dsize_error>The given file does not match the file size requirements</forms_file_dsize_error>
+					<forms_file_dext_error>The given file has a disallowed file extension</forms_file_dext_error>
+				</numIndex>
+				<numIndex index="12" type="array">
+					<uName>FRM181GJP</uName>
+					<type>text</type>
+					<label>Surname</label>
+					<required>on</required>
+					<validation_required_message>Bitte geben Sie Ihren Namen an.</validation_required_message>
+					<input_field_value></input_field_value>
+					<input_form_cols>20</input_form_cols>
+					<validation_type>no_validation</validation_type>
+					<validation_error_message>Falsche Eingabe</validation_error_message>
+					<use_as_email_choose>no_recipient</use_as_email_choose>
+				</numIndex>
+				<numIndex index="13" type="array">
+					<uName>FYW976YBZ</uName>
+					<type>text</type>
+					<label>Firstname</label>
+					<required>on</required>
+					<validation_required_message>Bitte geben Sie Ihren Vornamen an.</validation_required_message>
+					<input_field_value></input_field_value>
+					<input_form_cols>30</input_form_cols>
+					<validation_type>no_validation</validation_type>
+					<validation_error_message>Invalid value</validation_error_message>
+					<use_as_email_choose>no_recipient</use_as_email_choose>
+				</numIndex>
+				<numIndex index="14" type="array">
+					<uName>FHT979REN</uName>
+					<type>text</type>
+					<label>Address</label>
+					<validation_required_message>Eingabe fehlt</validation_required_message>
+					<input_field_value></input_field_value>
+					<input_form_cols>20</input_form_cols>
+					<validation_type>no_validation</validation_type>
+					<validation_error_message>Falsche Eingabe</validation_error_message>
+					<use_as_email_choose>no_recipient</use_as_email_choose>
+				</numIndex>
+				<numIndex index="15" type="array">
+					<uName>FWC474BVS</uName>
+					<type>radio</type>
+					<label>Title</label>
+					<validation_required_message>Eingabe fehlt</validation_required_message>
+					<build_rowcount>3</build_rowcount>
+					<use_as_email_choose>no_recipient</use_as_email_choose>
+					<multiple_option type="array">
+						<mopt-0 type="array">
+							<value>Mrs.</value>
+							<display>Mrs.</display>
+						</mopt-0>
+						<mopt-1 type="array">
+							<value>Mr.</value>
+							<display>Mr.</display>
+						</mopt-1>
+						<mopt-2 type="array">
+							<value>Miss.</value>
+							<display>Miss.</display>
+						</mopt-2>
+					</multiple_option>
+					<request_post_name></request_post_name>
+				</numIndex>
+				<numIndex index="16" type="array">
+					<uName>FHH134RVW</uName>
+					<type>text</type>
+					<label>ZIP</label>
+					<validation_required_message>Eingabe fehlt</validation_required_message>
+					<input_field_value></input_field_value>
+					<input_form_cols>8</input_form_cols>
+					<validation_type>numbers</validation_type>
+					<validation_error_message>Falsche Eingabe</validation_error_message>
+					<use_as_email_choose>no_recipient</use_as_email_choose>
+				</numIndex>
+				<numIndex index="17" type="array">
+					<uName>FHV308IRB</uName>
+					<type>text</type>
+					<label>Place</label>
+					<validation_required_message>Eingabe fehlt</validation_required_message>
+					<input_field_value></input_field_value>
+					<input_form_cols>30</input_form_cols>
+					<validation_type>no_validation</validation_type>
+					<validation_error_message>Invalid value</validation_error_message>
+					<use_as_email_choose>no_recipient</use_as_email_choose>
+				</numIndex>
+				<numIndex index="18" type="array">
+					<uName>FRK336YGV</uName>
+					<type>separator</type>
+					<label></label>
+					<exclude_button_from_stats>on</exclude_button_from_stats>
+					<disable_field_on_email>on</disable_field_on_email>
+				</numIndex>
+				<numIndex index="19" type="array">
+					<uName>FLP357DVO</uName>
+					<type>text</type>
+					<label>Phone</label>
+					<validation_required_message>Eingabe fehlt</validation_required_message>
+					<input_field_value></input_field_value>
+					<input_form_cols>30</input_form_cols>
+					<validation_type>no_validation</validation_type>
+					<validation_error_message>Invalid value</validation_error_message>
+					<use_as_email_choose>no_recipient</use_as_email_choose>
+				</numIndex>
+				<numIndex index="20" type="array">
+					<uName>FOU735BBZ</uName>
+					<type>text</type>
+					<label>Business phone</label>
+					<validation_required_message>Eingabe fehlt</validation_required_message>
+					<input_field_value></input_field_value>
+					<input_form_cols>15</input_form_cols>
+					<validation_type>no_validation</validation_type>
+					<validation_error_message>Falsche Eingabe</validation_error_message>
+					<use_as_email_choose>no_recipient</use_as_email_choose>
+				</numIndex>
+				<numIndex index="21" type="array">
+					<uName>FDO297STU</uName>
+					<type>title</type>
+					<label>Private address</label>
+					<exclude_button_from_stats>on</exclude_button_from_stats>
+				</numIndex>
+				<numIndex index="22" type="array">
+					<uName>FUZ816IUD</uName>
+					<type>separator</type>
+					<label></label>
+					<validation_required_message>Eingabe fehlt</validation_required_message>
+				</numIndex>
+			</numIndex>
+		</mailform_forms>
+		<mailform_config type="array">
+			<numIndex index="0" type="array">
+				<field_config_colspan type="integer">1</field_config_colspan>
+				<field_config_rowspan type="integer">1</field_config_rowspan>
+				<field_config_colIndex type="integer">0</field_config_colIndex>
+				<field_config_rowIndex type="integer">0</field_config_rowIndex>
+				<field_config_cssclass>td-no-style</field_config_cssclass>
+				<field_config_width type="integer">0</field_config_width>
+				<field_config_height type="integer">0</field_config_height>
+				<field_config_page type="integer">0</field_config_page>
+				<field_config_placeholder_index></field_config_placeholder_index>
+				<field_config_form_keys>FDO297STU,FUZ816IUD,FWC474BVS,FRM181GJP,FYW976YBZ,FHT979REN,FHH134RVW,FHV308IRB,FRK336YGV,FLP357DVO,FTJ081LQJ</field_config_form_keys>
+			</numIndex>
+			<numIndex index="1" type="array">
+				<field_config_colspan type="integer">1</field_config_colspan>
+				<field_config_rowspan type="integer">1</field_config_rowspan>
+				<field_config_colIndex type="integer">1</field_config_colIndex>
+				<field_config_rowIndex type="integer">0</field_config_rowIndex>
+				<field_config_cssclass>td-no-style</field_config_cssclass>
+				<field_config_width type="integer">0</field_config_width>
+				<field_config_height type="integer">0</field_config_height>
+				<field_config_page type="integer">0</field_config_page>
+				<field_config_placeholder_index></field_config_placeholder_index>
+				<field_config_form_keys>FIS134JEE,FUZ816IUD,FOQ713HFG,FGJ455ZGX,FDK199JWC,FDW957LHR,FRK336YGV,FOU735BBZ</field_config_form_keys>
+			</numIndex>
+			<numIndex index="2" type="array">
+				<field_config_colspan type="integer">2</field_config_colspan>
+				<field_config_rowspan type="integer">1</field_config_rowspan>
+				<field_config_colIndex type="integer">0</field_config_colIndex>
+				<field_config_rowIndex type="integer">1</field_config_rowIndex>
+				<field_config_cssclass>td-no-style</field_config_cssclass>
+				<field_config_width type="integer">0</field_config_width>
+				<field_config_height type="integer">0</field_config_height>
+				<field_config_page type="integer">0</field_config_page>
+				<field_config_placeholder_index></field_config_placeholder_index>
+				<field_config_form_keys>FWT525PBK,FHD951IVL</field_config_form_keys>
+			</numIndex>
+			<numIndex index="3" type="array">
+				<field_config_colspan type="integer">1</field_config_colspan>
+				<field_config_rowspan type="integer">1</field_config_rowspan>
+				<field_config_colIndex type="integer">1</field_config_colIndex>
+				<field_config_rowIndex type="integer">1</field_config_rowIndex>
+				<field_config_cssclass>td-no-style</field_config_cssclass>
+				<field_config_width type="integer">0</field_config_width>
+				<field_config_height type="integer">0</field_config_height>
+				<field_config_page type="integer">0</field_config_page>
+				<field_config_placeholder_index>1,0</field_config_placeholder_index>
+				<field_config_form_keys></field_config_form_keys>
+			</numIndex>
+			<numIndex index="4" type="array">
+				<field_config_colspan type="integer">2</field_config_colspan>
+				<field_config_rowspan type="integer">1</field_config_rowspan>
+				<field_config_colIndex type="integer">0</field_config_colIndex>
+				<field_config_rowIndex type="integer">2</field_config_rowIndex>
+				<field_config_cssclass>td-no-style</field_config_cssclass>
+				<field_config_width type="integer">0</field_config_width>
+				<field_config_height type="integer">0</field_config_height>
+				<field_config_page type="integer">0</field_config_page>
+				<field_config_placeholder_index></field_config_placeholder_index>
+				<field_config_form_keys>FWE890FFZ,FLF291FUZ,FRK336YGV</field_config_form_keys>
+			</numIndex>
+			<numIndex index="5" type="array">
+				<field_config_colspan type="integer">1</field_config_colspan>
+				<field_config_rowspan type="integer">1</field_config_rowspan>
+				<field_config_colIndex type="integer">1</field_config_colIndex>
+				<field_config_rowIndex type="integer">2</field_config_rowIndex>
+				<field_config_cssclass>td-no-style</field_config_cssclass>
+				<field_config_width type="integer">0</field_config_width>
+				<field_config_height type="integer">0</field_config_height>
+				<field_config_page type="integer">0</field_config_page>
+				<field_config_placeholder_index>1,0</field_config_placeholder_index>
+				<field_config_form_keys></field_config_form_keys>
+			</numIndex>
+			<numIndex index="6" type="array">
+				<field_config_colspan type="integer">1</field_config_colspan>
+				<field_config_rowspan type="integer">1</field_config_rowspan>
+				<field_config_colIndex type="integer">0</field_config_colIndex>
+				<field_config_rowIndex type="integer">3</field_config_rowIndex>
+				<field_config_cssclass>td-no-style</field_config_cssclass>
+				<field_config_width type="integer">0</field_config_width>
+				<field_config_height type="integer">0</field_config_height>
+				<field_config_page type="integer">0</field_config_page>
+				<field_config_placeholder_index></field_config_placeholder_index>
+				<field_config_form_keys></field_config_form_keys>
+			</numIndex>
+			<numIndex index="7" type="array">
+				<field_config_colspan type="integer">1</field_config_colspan>
+				<field_config_rowspan type="integer">1</field_config_rowspan>
+				<field_config_colIndex type="integer">1</field_config_colIndex>
+				<field_config_rowIndex type="integer">3</field_config_rowIndex>
+				<field_config_cssclass>td-no-style</field_config_cssclass>
+				<field_config_width type="integer">0</field_config_width>
+				<field_config_height type="integer">0</field_config_height>
+				<field_config_page type="integer">0</field_config_page>
+				<field_config_placeholder_index></field_config_placeholder_index>
+				<field_config_form_keys>FMB296KSW</field_config_form_keys>
+			</numIndex>
+		</mailform_config>
+	</xml>
+	<xml_uid type="integer">38</xml_uid>
+</phparray>
