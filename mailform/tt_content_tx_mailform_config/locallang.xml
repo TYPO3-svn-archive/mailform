@@ -26,7 +26,7 @@
 			<label index="forms_type_staticcountry">Country list</label>
 			<label index="forms_type_property">Property</label>
 			<label index="forms_type_label">Label</label>
-			<label index="forms_display_label">Verstecke das Label im Frontend</label>
+			<label index="forms_display_label">Hide the label in the frontend</label>
 			<label index="forms_type_contelement">Typo3 Content Element</label>
 			<label index="form_standard_value">Standard Wert</label>
 			<label index="form_display_error">Hide FE Error</label>
@@ -245,7 +245,7 @@
 			<label index="fWiz_alternativepage_lastpage">Show last page</label>
 			<label index="fWiz_alternativepage_firstpage">Show first page</label>
 			<label index="fWiz_standard_template">Standard Template</label>
-			<label index="fWiz_choose_template">Wählen Sie das Template</label>
+			<label index="fWiz_choose_template">Choose a field template</label>
 			<label index="no_title">No title</label>
 			<label index="really_delete_unrefforms">Do you really want to delete this unreferenced Fields? Statistics are deleted with it too!</label>
 			<label index="delete_unrefforms">Delete unreferenced fields</label>

@@ -162,7 +162,6 @@ abstract class tx_mailform_formAbstract_BE extends tx_mailform_formAbstract_Stat
 		$table->addRow($this->row_preDisplayFieldCondition());
 		$table->addRow($this->displayOptions());
 
-		// HOOK N.S.KZ 
 		if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['mailform']['addOwnFieldOptionsHook'])) {
 			
 			foreach($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['mailform']['addOwnFieldOptionsHook'] as $_classRef) {
@@ -194,7 +193,6 @@ abstract class tx_mailform_formAbstract_BE extends tx_mailform_formAbstract_Stat
 						$add_table->addRow($add_tr);
 						$table->addRow($this->makeRow($row['title'], $add_table->getElementRendered()));
 					}
-				//}
 			}
 		}
 		// HOOK END
