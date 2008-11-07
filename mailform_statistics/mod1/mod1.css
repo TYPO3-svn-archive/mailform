@@ -1,0 +1,50 @@
+.siteTitle {
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial;
+  background-color: #bbbfdd;
+  height: 25px;
+  border-top: 1px solid #8689a4;
+  border-bottom: 1px solid #8689a4;
+}
+
+.errorMessage {
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial;
+  background-color: #eeffdd;
+  height: 20px;
+  border-top: 1px solid #8689a4;
+  border-bottom: 1px solid #8689a4;
+}
+
+.naviElement {
+  font-size: 12px;
+  font-weight: none;
+  font-family: Arial;
+  background-color: #d7d9e3;
+  height: 20px;
+  border-top: 1px solid #7c7f97;
+  border-bottom: 1px solid #7c7f97;
+}
+
+.courseListElement {
+	background-color: #E5EEFF;
+	height: 20px;
+	border-top: 1px solid #80ACFF;
+	border-bottom: 1px solid #80ACFF;
+}
+.courseListElementOnmouse {
+	background-color: #B3CCFF;
+	height: 20px;
+	border-top: 1px solid #669CFF;
+	border-bottom: 1px solid #669CFF;
+}
+
+a.modLink {
+  color: #3C5B8E;
+  text-decoration: underline;
+}
+a.modLink:hover {
+  color: #9CA6B5;
+}

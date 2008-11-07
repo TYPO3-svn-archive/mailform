@@ -1,0 +1,15 @@
+plugin.mailform {
+
+/*
+*  Do not change the css and template definitions
+*  If you like to change these, change these in your TypoScript Constant editor
+*  The best thing you could do for Templates, copy the template folder in the mailform directory
+*  Put it into fileadmin and set the mailform constants for the template right.
+*/
+
+#-------------------------------------------------------------------------------
+# lib.pagetitle
+#-------------------------------------------------------------------------------
+  	# cat=plugin.mailform//addon; type=boolean; label= Enable Mailform Statistics Addon
+		enable_addon_mailform_statistics = 1
+}

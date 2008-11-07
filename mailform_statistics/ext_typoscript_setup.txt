@@ -1,0 +1,3 @@
+plugin.tx_mailform_pi1 {
+	enable_addon_mailform_statistics = {$plugin.mailform.enable_addon_mailform_statistics}
+}
