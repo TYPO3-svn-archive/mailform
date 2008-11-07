@@ -1,0 +1,507 @@
+/*******************************************************************************
+
+	Element container layout definition
+
+	All elements are shown in a container which uses one of the following
+	classes. Please read the specific container description for more
+	Information.
+
+*******************************************************************************/
+
+/**
+ * This class represents the outer mailform table. In this table
+ * all fields and elements are shown in cells
+ */
+.mailform-table-outer {}
+
+/**
+ * If you like to access every single cell, please use the form wizard
+ * You may input here a class which is used for every cell, but you must
+ */
+
+/**
+ * td-no-style represents every single defined cell. But you can change the
+ * class of every cell in the field wizard
+ */
+.td-no-style { background-color: #FFF; }
+/**
+ * This class is used for the outer container of a Form-Element
+ * IF the current form content is valid
+ * In the current version not used, for later purposes
+ */
+.tx_mailform_valid { }
+
+/**
+ * This class is used for the outer container of a Form-Element
+ * IF the current form content is not valid.
+ */
+.tx_mailform_invalid { }
+
+/**
+ * This class is used for the outer container of a Form-Element
+ * IF the current content is required, and the user has not yet input
+ * the required data
+ */
+.tx_mailform_required { }
+
+/**
+ * This class is used for the outer container of a Form-Element
+ * The class is used, if the form has not yet sent, and is not corrected.
+ * Actually this is the class, the user will see the most (if he inputs correct
+ * data)
+ */
+.tx_mailform_none { }
+
+/**
+ * If the user inputs invalid data, the error will be displayed with
+ * this text formation
+ */
+.tx_mailform_FieldErrorMessage {
+	color: #FF0000;
+	font-weight: bold;
+}
+
+/**
+ * This is the class which will be the outer container class for Layout
+ * elements.
+ * That excludes all form elements.
+ * It Includes eg title-element, html-element, separator-element
+ */
+.tx_layout_element_container {
+	color: #F00;
+}
+
+/*******************************************************************************
+
+ Formular required star
+
+ All existing possibilities for a required star are listed below
+
+*******************************************************************************/
+.tx_mailform_required_star {}
+.tx_mailform_required_star-ok {}
+.tx_mailform_required_star-required {}
+.tx_mailform_required_star-error {}
+
+/*******************************************************************************
+
+ Formular element label definition
+
+ All current existing elements are listed below
+ You can separately design every different element type
+
+*******************************************************************************/
+
+.tx_mailform_label_global {
+
+}
+
+.tx_mailform_label_textarea {
+
+}
+
+.tx_mailform_label_title {
+
+}
+
+.tx_mailform_label_text {
+
+}
+
+.tx_mailform_label_textwdesc {
+
+}
+
+.tx_mailform_label_default {
+	width:200px;
+}
+
+.tx_mailform_label_submit {
+
+}
+
+.tx_mailform_label_file {
+
+}
+
+.tx_mailform_label_password {
+
+}
+
+.tx_mailform_label_radio {
+
+}
+
+.tx_mailform_label_select {
+
+}
+
+.tx_mailform_label_layout_default {
+
+}
+
+.tx_mailform_label_navi_nextpage {
+
+}
+
+.tx_mailform_label_navi_previouspage {
+
+}
+
+.tx_mailform_label_navi_pagenavi {
+
+}
+
+.tx_mailform_label_navi_reset {
+
+}
+
+.tx_mailform_label_submit {
+
+}
+
+/*******************************************************************************
+
+ Formular element layout definition
+
+ All current existing elements are listed below
+ You can separately design every different element type
+
+*******************************************************************************/
+
+ /**
+  * Normal Text element
+  */
+.tx_mailform_text {
+  font-size: 11px;
+  color: #000;
+  border: 1px solid #222;
+  height: 15px;
+}
+
+/**
+ * Select (Dropdown / Multiselect)
+ */
+.tx_mailform_select {
+  font-size: 10px;
+  color: #000;
+  border: 1px solid #222;
+  margin-bottom: 5px;
+}
+
+.tx_mailform_option {
+  font-size: 10px;
+  color: #000;
+}
+
+/**
+ * Textarea
+ */
+.tx_mailform_textarea {
+  font-size: 11px;
+  font-family: Arial;
+  color: #000;
+  background-color: #F3F3F3;
+  margin-bottom: 5px;
+  border: 1px solid #222;
+ }
+
+/**
+ * Hidden Field
+ * (Actually it does not make sense to design a invisible element)
+ */
+.tx_mailform_hidden {
+  font-size: 10px;
+  color: #000;
+  border: 1px solid #222;
+}
+
+/**
+ * Password field
+ */
+.tx_mailform_password {
+  font-size: 10px;
+  color: #000;
+  border: 1px solid #222;
+  margin-bottom: 5px;
+}
+
+/**
+ * File Upload
+ * Currently not functional
+ */
+.tx_mailform_file {
+  font-size: 10px;
+  color: #000;
+  border: 1px solid #222;
+  margin-bottom: 5px;
+ }
+
+/**
+ * Captcha
+ */
+.tx_mailform_captcha {
+  font-size: 15px;
+  color: #000;
+  border: 1px solid #222;
+  height: 18px;
+}
+
+/**
+ * Checkboxes
+ */
+input.tx_mailform_checkbox_box {
+
+}
+div.tx_mailform_checkbox_wrap {
+	overflow:hidden;
+	float:left;
+}
+* html div.tx_mailform_checkbox_wrap {
+	overflow:visible;
+	height:1%;
+}
+
+div.tx_mailform_checkbox_element {
+	width:90px;
+	height:15px;
+}
+
+td.tx_mailform_checkbox_text {
+  font-size: 10px;
+  color: #000;
+}
+
+label.tx_mailform_cb_label {
+  font-size: 10px;
+  color: #000;
+}
+
+/**
+ * Radio Buttons
+ */
+input.tx_mailform_radio_button { }
+
+td.tx_mailform_radio_text {
+  font-size: 10px;
+  color: #000;
+  padding: 5px;
+}
+label.tx_mailform_rb_label {
+  font-size: 10px;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+
+tx_mailform_radio_element {
+	width:120px;
+	height:15px;
+}
+
+/*******************************************************************************
+
+ Layout-element layout definition
+
+ All current existing elements are listed below
+ You can separately design every different element type
+
+*******************************************************************************/
+
+/**
+ * Popular HR Separator
+ */
+.tx_mailform_hrSeparator {
+  width: 100%;
+  height: 2px;
+}
+
+/**
+ * Text Title
+ */
+.mailform-table-outer h3 {
+  display: block;
+}
+
+/**
+ * HTML - Element
+ *
+ * - The HTML Element is not accessable over CSS.
+ * - Please Include your CSS Definition in your specified HTML Element
+ * - In the Wizard
+ */
+
+ /*******************************************************************************
+
+ Navigation-element layout definition
+
+ All current existing elements are listed below
+ You can separately design every different element type
+
+*******************************************************************************/
+ /**
+ * Submit Button
+ */
+.tx_mailform_submit {
+  font-size: 10px;
+  color: #000;
+  border: 1px solid #222;
+  margin-bottom: 5px;
+ }
+
+/**
+ * Submitbutton with extended features
+ */
+.tx_mailform_submitextended {
+  font-size: 10px;
+  color: #000;
+  border: 1px solid #222;
+  margin-bottom: 5px;
+}
+
+.tx_mailform_navi_nextpage {
+	font-size: 10px;
+	color: #000;
+	border: 1px solid #222;
+	margin-bottom: 5px;
+}
+
+.tx_mailform_navi_previouspage {
+	font-size: 10px;
+	color: #000;
+	border: 1px solid #222;
+	margin-bottom: 5px;
+}
+
+.tx_mailform_navi_reload {
+	font-size: 10px;
+	color: #000;
+	border: 1px solid #222;
+	margin-bottom: 5px;
+}
+
+.tx_mailform_navi_pagenavi {
+	font-size: 10px;
+	color: #000;
+	border: 1px solid #222;
+	margin-bottom: 5px;
+}
+
+.tx_mailform_navi_reset {
+
+}
+
+/******************************************************************************
+ * Faebi Code
+ ******************************************************************************
+ */
+
+.tx_mailform_field_text,
+.tx_mailform_field_textwdesc,
+.tx_mailform_field_textwdesc-anderes_textfeld,
+.tx_mailform_field_textarea,
+.tx_mailform_field_select,
+.tx_mailform_field_radio,
+.tx_mailform_field_password,
+.tx_mailform_field_submit,
+.tx_mailform_field_submitimage,
+.tx_mailform_field_submitextended,
+.tx_mailform_field_file {
+  width:100%;
+	overflow:hidden;
+}
+
+.tx_mailform_field_text-float,
+.tx_mailform_field_text-float_labelrechts {
+	float:left;
+}
+
+.tx_mailform_field_text-float_ohnelabel {
+	float:left;
+	overflow:hidden;
+}
+
+.tx_mailform_field_select-float_left_withlabel,
+.tx_mailform_field_select-float_left {
+	float:left;
+	width:100%;
+}
+
+.tx_mailform_field_checkbox {
+	overflow:hidden;
+}
+
+.tx_mailform_field_captcha {}
+.tx_mailform_field_staticcountry {}
+.tx_mailform_field_contelement {}
+
+
+/**
+ * Layout Elements
+ */
+.tx_mailform_layout_default {}
+.tx_mailform_layout_title {}
+.tx_mailform_layout_htmlelement {}
+.tx_mailform_layout_error {}
+
+/**
+ * Navigation
+ */
+.tx_mailform_navi_pagenavi {}
+.tx_mailform_navi_nextpage {}
+.tx_mailform_navi_previouspage {}
+.tx_mailform_navi_reset {}
+
+
+.tx_mailform_td_label{
+	width:200px;
+}
+
+.tx_mailform_div_label_left {
+	width:200px;
+	float:left;
+}
+
+.tx_mailform_div_label_error {
+  color:#F00;
+	font-weight: bold;
+}
+
+.tx_mailform_div_input {
+	float:left;
+}
+
+.tx_mailform_div_icon {
+	float:left;
+}
+
+.tx_mailform_div_err_msg,
+.tx_mailform_div_err_msg_block {
+	display:block;
+}
+.tx_mailform_div_err_msg,
+.tx_mailform_div_err_msg_float-left {
+	float:left;
+}
+
+.tx_mailform_div_err_msg_float-none {
+	float:none;
+}
+.tx_mailform_div_err_msg_1 {}
+
+.tx_mailform_field_text-float_labelrechts_input {
+	width:60px;
+}
+
+.tx_mailform_div_label_left_nowidth {
+	float:left;
+}
+
+.tx_mailform_div_output_select_width {
+	float:left;
+	width:200px;
+}
+
+.tx_mailform_div_output_select-check {
+	float:left;
+}

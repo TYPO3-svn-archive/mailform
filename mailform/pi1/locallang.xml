@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_mailform_pi1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="list_mode_1">Mode 1</label>
+			<label index="list_mode_2">Mode 2</label>
+			<label index="list_mode_3">Mode 3</label>
+			<label index="form_page">Page</label>
+			<label index="form_field_required">This field is required. Please fill in your desired value.</label>
+			<label index="back">Back</label>
+			<label index="submit_button_label">Click here to submit value</label>
+			<label index="xml_format_error">Mailform Error: The XML Configuration is not properly set. Please save again your Configuration.</label>
+			<label index="title_sent_form">Thanx for sending your informations.</label>
+			<label index="formType_checkbox_selected">Selected</label>
+			<label index="formType_checkbox_unselected">Not Selected</label>
+			
+			<label index="form_file_size_error">The given file does not match the file size requirements</label>
+			<label index="form_file_ext_error">The given file has a disallowed file extension</label>
+			<label index="form_file_UPLOAD_ERR_1">The uploaded file exceeds the upload_max_filesize directive in php.ini.</label>
+			<label index="form_file_UPLOAD_ERR_2">The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form.</label>
+			<label index="form_file_UPLOAD_ERR_3">The uploaded file was only partially uploaded.</label>
+			<label index="form_file_UPLOAD_ERR_4">No file was uploaded.</label>
+			<label index="form_file_UPLOAD_ERR_6">Missing a temporary folder. Introduced in PHP 4.3.10 and PHP 5.0.3.</label>
+			<label index="form_file_UPLOAD_ERR_7">Failed to write file to disk. Introduced in PHP 5.1.0.</label>
+			<label index="form_file_UPLOAD_ERR_8">PHP: File upload stopped by extension. Introduced in PHP 5.2.0.</label>
+
+			<label index="cannot_display_data">Cannot display data</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="form_page">Page</label>
+			<label index="form_field_required">This field is required. Please fill in your desired value</label>
+			<label index="back">Back</label>
+			<label index="submit_button_label">Click here to submit value</label>
+			<label index="xml_format_error">Mailform Fehler: Die aktuelle XML Konfiguration ist fehlerhaft. Bitte speichern Sie das XML erneut ab um die Fehler zu beheben. </label>
+			<label index="title_sent_form">Thanx for sending your informations.</label>
+			<label index="formType_checkbox_selected">Ausgewählt</label>
+			<label index="formType_checkbox_unselected">Nicht ausgewählt</label>
+			
+			<label index="form_file_size_error">Die angegebene Datei entspricht nicht den erlaubten Dateigrössen</label>
+			<label index="form_file_ext_error">Die angegebene Datei besitzt eine nicht erlaubte Dateiendung</label>
+			<label index="form_file_1">Die hochgeladene Datei überschreitet die in der Anweisung upload_max_filesize in php.ini festgelegte Größe.</label>
+			<label index="form_file_2">Die hochgeladene Datei überschreitet die in dem HTML Formular mittels der Anweisung MAX_FILE_SIZE angegebene maximale Dateigröße.</label>
+			<label index="form_file_3">Die Datei wurde nur teilweise hochgeladen.</label>
+			<label index="form_file_4">Es wurde keine Datei hochgeladen.</label>
+
+			<label index="cannot_display_data">Kann Datentyp nicht anzeigen</label>
+		</languageKey>
+		<languageKey index="en" type="array">
+			<label index="form_page">Page</label>
+			<label index="form_field_required">This field is required. Please fill in your desired value.</label>
+			<label index="back">Back</label>
+			<label index="submit_button_label">Click here to submit value</label>
+			<label index="xml_format_error">Mailform Error: The XML Configuration is not properly set. Please save again your Configuration.</label>
+			<label index="title_sent_form">Thanx for sending your informations.</label>
+			<label index="formType_checkbox_selected">Selected</label>
+			<label index="formType_checkbox_unselected">Not Selected</label>
+			
+			<label index="form_file_size_error">The given File does not match the file size requirements</label>
+			<label index="form_file_ext_error">The given file has a disallowed file extension.</label>
+			<label index="form_file_UPLOAD_ERR_1">The uploaded file exceeds the upload_max_filesize directive in php.ini.</label>
+			<label index="form_file_UPLOAD_ERR_2">The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form.</label>
+			<label index="form_file_UPLOAD_ERR_3">The uploaded file was only partially uploaded.</label>
+			<label index="form_file_UPLOAD_ERR_4">No file was uploaded.</label>
+
+			<label index="cannot_display_data">Cannot display data</label>
+		</languageKey>
+		<languageKey index="fr" type="array">
+			<label index="form_page">Page</label>
+			<label index="form_field_required">This field is required. Please fill in your desired value.</label>
+			<label index="back">Back</label>
+			<label index="submit_button_label">Click here to submit value</label>
+			<label index="xml_format_error">The XML Configuration is not properly set. Please save again your Configuration.</label>
+			<label index="title_sent_form">Thanx for sending your informations.</label>
+			<label index="formType_checkbox_selected">Selecté</label>
+			<label index="formType_checkbox_unselected">Pas selecté</label>
+			
+			<label index="form_file_size_error">The given File does not match the file size requirements</label>
+			<label index="form_file_ext_error">The given file has a disallowed file extension.</label>
+			<label index="form_file_1">Le fichier téléchargé excède la taille de upload_max_filesize, configurée dans le php.ini.</label>
+			<label index="form_file_2">Le fichier téléchargé excède la taille de MAX_FILE_SIZE, qui a été spécifiée dans le formulaire HTML.</label>
+			<label index="form_file_3">Le fichier n'a été que partiellement téléchargé.</label>
+			<label index="form_file_4">Aucun fichier n'a été téléchargé.</label>
+			
+			<label index="cannot_display_data">Cannot display data</label>
+		</languageKey>
+	</data>
+</T3locallang>

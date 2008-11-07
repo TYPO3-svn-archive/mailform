@@ -1,0 +1,314 @@
+###FORM_DEFAULT###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###">
+  <table summary="" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td><label style="width:200px;" class="tx_mailform_label_default" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label></td>
+			<td>###OUTPUT_FORMELEMENT###</td><td>###OUTPUT_REQUIRED_STAR### ###OUTPUT_ICON###</td>
+		</tr>
+	</table>
+</div>
+###END_FORM_DEFAULT###
+
+###FORM_TEXT###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###" style="width:100%;overflow:hidden;">
+	<div style="width:200px;float:left;"><label class="tx_mailform_label_text tx_mailform_label_global" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label></div>
+	<div style="float:left;"><input type="text" value="###OUTPUT_FORMVALUE###" size="###OUTPUT_FORMSIZE###" id="###OUTPUT_FORMID###" name="###OUTPUT_FORMNAME###" class="tx_mailform_text###OUTPUT_FORMCLASS###"###OUTPUT_ADDATTRIBUTES### /></div>
+	<div style="float:left;">###OUTPUT_ICON###</div>
+	<div style="">###OUTPUT_ERR_MSG###</div>
+</div>
+###END_FORM_TEXT###
+
+###FORM_TEXT[float]###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###" style="float:left;">
+	<div style="width:200px;float:left;"><label class="tx_mailform_label_text tx_mailform_label_global" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label></div>
+	<div style="float:left;"><input type="text" value="###OUTPUT_FORMVALUE###" size="###OUTPUT_FORMSIZE###" id="###OUTPUT_FORMID###" name="###OUTPUT_FORMNAME###" class="tx_mailform_text###OUTPUT_FORMCLASS###"###OUTPUT_ADDATTRIBUTES### /></div>
+	<div style="float:left;">###OUTPUT_ICON###</div>
+	<div style="display:block;float:left;">###OUTPUT_ERR_MSG###</div>
+</div>
+###END_FORM_TEXT[float]###
+
+###FORM_TEXT[float_ohnelabel]###
+<div style="overflow:hidden;float:left;">
+	<div style="float:left;"><input type="text" value="###OUTPUT_FORMVALUE###" size="###OUTPUT_FORMSIZE###" id="###OUTPUT_FORMID###" name="###OUTPUT_FORMNAME###" class="tx_mailform_text###OUTPUT_FORMCLASS###"###OUTPUT_ADDATTRIBUTES### /></div>
+	<div style="float:left;">###OUTPUT_ICON###</div>
+	<div style="float:left;display:block;">###OUTPUT_ERR_MSG###</div>
+</div>
+###END_FORM_TEXT[float_ohnelabel]###
+
+###FORM_TEXT[float_labelrechts]###
+<div style="float:left;">
+	<div style="float:left;">&nbsp;<input type="text" value="###OUTPUT_FORMVALUE###" style="width:60px;" id="###OUTPUT_FORMID###" name="###OUTPUT_FORMNAME###" class="tx_mailform_text###OUTPUT_FORMCLASS###"###OUTPUT_ADDATTRIBUTES### /></div>
+	<div style="float:left;">&nbsp;###OUTPUT_LABEL###</div>
+	<div style="float:left;">###OUTPUT_ICON###</div>
+	<div style="float:left;display:block;">###OUTPUT_ERR_MSG###</div>
+</div>
+###END_FORM_TEXT[float_labelrechts]###
+
+###FORM_TEXTWDESC[anderes_textfeld]###
+<div style="width:100%;overflow:hidden;">
+	<div style="width:200px;float:left;color:#F00;"><label class="tx_mailform_label_text tx_mailform_label_global" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label></div>
+	<div style="float:left;"><input type="text" value="###OUTPUT_FORMVALUE###" size="###OUTPUT_FORMSIZE###" id="###OUTPUT_FORMID###" name="###OUTPUT_FORMNAME###" class="tx_mailform_text###OUTPUT_FORMCLASS###"###OUTPUT_ADDATTRIBUTES### /></div>
+	<div style="float:left;">###OUTPUT_ICON###</div>
+	<div style="display:block;">###OUTPUT_ERR_MSG###</div>
+</div>
+###END_FORM_TEXTWDESC[anderes_textfeld]###
+
+###FORM_TEXTWDESC###
+  <table summary="" cellpadding="0" cellspacing="0" border="0">
+  	<tr>
+  		<td rowspan="2" style="width:200px;"><label class="tx_mailform_label_textwdesc tx_mailform_label_global" for="###OUTPUT_INPUT_ID###"><b>###OUTPUT_LABEL###</b></label></td>
+  		<td><input type="text" value="###OUTPUT_FORMVALUE###" size="###OUTPUT_FORMSIZE###" id="###OUTPUT_FORMID###" name="###OUTPUT_FORMNAME###" class="tx_mailform_text###OUTPUT_FORMCLASS###"###OUTPUT_ADDATTRIBUTES### /></td>
+  		<td>###OUTPUT_ICON###</td><td>###OUTPUT_ERR_MSG###</td>
+  	</tr>
+      <tr>
+        <td colspan="3">###OUTPUT_DESCRIPTION###</td>
+      </tr>
+</table>
+</div>
+###END_FORM_TEXTWDESC###
+
+###FORM_TEXTAREA###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###" style="overflow:hidden;width:100%;">
+	<div style="width:200px;float:left;"><label class="tx_mailform_label_text tx_mailform_label_global" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label></div>
+	<div style="float:left;"><textarea id="###OUTPUT_FORMID###" name="###OUTPUT_FORMNAME###" rows="###OUTPUT_FORMROWS###" cols="###OUTPUT_FORMCOLS###" class="tx_mailform_textarea"###OUTPUT_ADDATTRIBUTES###>###OUTPUT_FORMVALUE###</textarea></div>
+	<div style="float:left;">###OUTPUT_ICON###</div>
+	<div style="">###OUTPUT_ERR_MSG###</div>
+</div>
+###END_FORM_TEXTAREA###
+
+###FORM_SELECT###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###" style="overflow:hidden;width:100%;">
+	<div style="width:200px;float:left;"><label class="tx_mailform_label_checkbox tx_mailform_label_global" style="width:200px;" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label></div>
+	<div style="float:left;width:200px;">###OUTPUT_FORMELEMENT###</div>
+	<div style="float:left;">&nbsp;###OUTPUT_ICON###</div>
+	<div style="float:none;">###OUTPUT_ERR_MSG###</div>
+</div>
+###END_FORM_SELECT###
+
+###FORM_SELECT[float_left_withlabel]###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###" style="float:left;width:100%;">
+	<div style="width:200px;float:left;"><label class="tx_mailform_label_checkbox tx_mailform_label_global" style="width:200px;" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label></div>
+	<div style="float:left;">###OUTPUT_FORMELEMENT###</div>
+	<div style="float:left;">###OUTPUT_ICON###</div>
+	<div style="float:left;">###OUTPUT_ERR_MSG###</div>
+</div>
+###END_FORM_SELECT[float_left_withlabel]###
+
+###FORM_SELECT[float_left]###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###" style="float:left;width:100%;">
+	<div style="float:left;">###OUTPUT_FORMELEMENT###</div>
+	<div style="float:left;">###OUTPUT_ICON###</div>
+	<div style="float:left;">###OUTPUT_ERR_MSG###</div>
+</div>
+###END_FORM_SELECT[float_left]###
+
+###FORM_CHECKBOX###
+<div id="###OUTPUT_FIELD_ID###" style="overflow:hidden;" class="###OUTPUT_EXTRA_CSS###">
+	<div style="width:200px;float:left;"><label class="tx_mailform_label_checkbox tx_mailform_label_global">###OUTPUT_LABEL###</label></div>
+	<div style="float:left;">###OUTPUT_FORMELEMENT######OUTPUT_FORMHIDDEN###</div>
+	<div style="float:left;">###OUTPUT_ICON###</div>
+	<div style="float:none;">&nbsp;###OUTPUT_ERR_MSG###</div>
+</div>
+###SUBEL_WRAP###
+<div class="tx_mailform_checkbox_wrap">###OUTPUT_ELEMENTS###</div>
+###END_SUBEL_WRAP###
+###SUBEL_SINGLEELEMENT###
+<div class="tx_mailform_checkbox_element ###OUTPUT_CLASS###" style="width:90px;height:15px;float:left;"><input class="mailform_checkbox_box" type="checkbox" id="###OUTPUT_FIELDID###" name="###OUTPUT_FIELDNAME###" value="###OUTPUT_FIELDVALUE###" ###OUTPUT_SELECTED###/><label class="tx_mailform_cb_label" for="###OUTPUT_FIELDID###">###OUTPUT_FIELDDISPLAY###</label></div>
+###END_SUBEL_SINGLEELEMENT###
+###END_FORM_CHECKBOX###
+
+###FORM_RADIO###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###" style="overflow:hidden;width:100%;">
+  <table summary="" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td style="width:200px;"><label class="tx_mailform_label_checkbox tx_mailform_label_global" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label></td>
+			<td>
+###OUTPUT_FORMELEMENT###
+###OUTPUT_FORMHIDDEN###
+###SUBEL_WRAP###
+<div class="tx_mailform_checkbox_wrap" style="float:left;">###OUTPUT_ELEMENTS###</div>
+###END_SUBEL_WRAP###
+###SUBEL_SINGLEELEMENT###
+<div class="tx_mailform_radio_element ###OUTPUT_CLASS###" style="width:120px;height:15px;"><input class="mailform_radio_box" type="radio" id="###OUTPUT_FIELDID###" name="###OUTPUT_FIELDNAME###" value="###OUTPUT_FIELDVALUE###" ###OUTPUT_SELECTED###/><label class="tx_mailform_cb_label" for="###OUTPUT_FIELDID###">###OUTPUT_FIELDDISPLAY###</label></div>
+###END_SUBEL_SINGLEELEMENT###
+			</td>
+			<td>###OUTPUT_ICON###</td><td>###OUTPUT_ERR_MSG###</td>
+		</tr>
+	</table>
+</div>
+###END_FORM_RADIO###
+
+###FORM_PASSWORD###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###" style="overflow:hidden;width:100%;">
+  <table summary="" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td style="width:200px;"><label class="tx_mailform_label_password tx_mailform_label_global" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label></td>
+			<td>###OUTPUT_FORMELEMENT###</td><td>###OUTPUT_ICON###</td><td>###OUTPUT_ERR_MSG###</td>
+		</tr>
+	</table>
+</div>
+###END_FORM_PASSWORD###
+
+###FORM_HIDDEN###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###">
+  ###OUTPUT_FORMELEMENT###
+</div>
+###END_FORM_HIDDEN###
+
+###FORM_SUBMIT###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###" style="overflow:hidden;width:100%;">
+	<table summary="" cellpadding="0" cellspacing="0" border="0">
+			<tr><td style="width:200px;"><label class="tx_mailform_label_submit tx_mailform_label_global" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label></td>
+			<td>###OUTPUT_FORMELEMENT###</td>
+		</tr>
+	</table>
+</div>
+###END_FORM_SUBMIT###
+
+###FORM_SUBMITIMAGE###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###" style="overflow:hidden;width:100%;">
+	<table summary="" cellpadding="0" cellspacing="0" border="0">
+			<tr><td style="width:200px;"><label class="tx_mailform_label_submit tx_mailform_label_global" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label></td>
+			<td>###OUTPUT_FORMELEMENT###</td>
+		</tr>
+	</table>
+</div>
+###END_FORM_SUBMITIMAGE###
+
+###FORM_SUBMITEXTENDED###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###" style="overflow:hidden;width:100%;">
+	<table summary="" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td style="width:200px;"><label class="tx_mailform_label_submit tx_mailform_label_global" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label></td>
+			<td>###OUTPUT_FORMELEMENT###</td>
+		</tr>
+	</table>
+</div>
+###END_FORM_SUBMITEXTENDED###
+
+###FORM_FILE###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###" style="overflow:hidden;width:100%;">
+	<table summary="file" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td rowspan="4" style="width:200px;"><label class="tx_mailform_label_file tx_mailform_label_global" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label></td>
+		</tr>
+		<tr>
+			<td colspan="2">###OUTPUT_FORMELEMENT###</td>
+		</tr>
+		<tr>
+			<td>###OUTPUT_ICON###</td>
+			<td>###OUTPUT_ERR_MSG###</td>
+		</tr>
+		<tr>
+			<td colspan="2"><input class="tx_mailform_navi_reload" type="submit" name="###OUTPUT_FORMNAME###" value="###OUTPUT_FORMVALUE###" />###OUTPUT_FORMHIDDEN###</td>
+		</tr>
+	</table>
+</div>
+###END_FORM_FILE###
+
+###FORM_CAPTCHA###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###">
+  <label class="tx_mailform_label_captcha tx_mailform_label_global" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label>
+  <table summary="" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td>###OUTPUT_CAPTCHA_IMAGE###</td><td>###OUTPUT_ICON###</td>
+			<td>###OUTPUT_ERR_MSG###</td>
+			<td>###OUTPUT_CAPTCHA_RELOAD###</td>
+		</tr>
+		<tr>
+		  <td>###OUTPUT_FORMELEMENT######OUTPUT_FORMHIDDEN###</td><td colspan="3">###OUTPUT_CAPTCHA_NOTICE###</td>
+		</tr>
+	</table>
+</div>
+###END_FORM_CAPTCHA###
+
+###FORM_STATICCOUNTRY###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###">
+  <table summary="" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td style="width:200px;"><label class="tx_mailform_label_text tx_mailform_label_global" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label></td>
+			<td>###OUTPUT_FORMELEMENT###</td>
+			<td>###OUTPUT_ICON###</td>
+			<td>###OUTPUT_ERR_MSG###</td>
+		</tr>
+	</table>
+</div>
+###END_FORM_STATICCOUNTRY###
+
+###FORM_CONTELEMENT###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###">
+  <table summary="" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+		<td style="width:200px;"><label class="tx_mailform_label_text tx_mailform_label_global" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label></td>
+		<td>###OUTPUT_FORMELEMENT###</td>
+	</table>
+</div>
+###END_FORM_CONTELEMENT###
+
+###LAYOUT_DEFAULT###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###">
+  <label class="tx_mailform_label_layout_default tx_mailform_label_global" for="###OUTPUT_INPUT_ID###">###OUTPUT_LABEL###</label>
+  <table summary="" cellpadding="0" cellspacing="0" border="0">
+		<tr><td>###OUTPUT_FORMELEMENT###</td><td>###OUTPUT_ICON###</td></tr>
+	</table>
+</div>
+###END_LAYOUT_DEFAULT###
+
+###LAYOUT_SEPARATOR###
+###OUTPUT_FORMELEMENT###
+###END_LAYOUT_SEPARATOR###
+
+###LAYOUT_TITLE###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###">
+	<div class="tx_mailform_title">###OUTPUT_FORMELEMENT###</div>
+</div>
+###END_LAYOUT_TITLE###
+
+###LAYOUT_HTMLELEMENT###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###">
+###OUTPUT_FORMELEMENT###
+</div>
+###END_LAYOUT_HTMLELEMENT###
+
+
+###LAYOUT_ERROR###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###">
+<div style="color:#F00; font-weight: bold;">###OUTPUT_LABEL###</div>
+###SUBEL_ERRORLIST###
+<li>###OUTPUT_FIELDERRORIMG### ###OUTPUT_FIELDLABEL###: ###OUTPUT_FIELDERRORMSG###</li>
+###END_SUBEL_ERRORLIST###
+</div>
+###END_LAYOUT_ERROR###
+
+###NAVI_PAGENAVI###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###">
+<div class="tx_mailform_label_navi_pagenavi">###OUTPUT_LABEL###</div>
+<div class="tx_mailform_pagenavi">###OUTPUT_FORMELEMENT###</div>
+</div>
+###END_NAVI_PAGENAVI###
+
+###NAVI_NEXTPAGE###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###">
+<div style="width:200px;float:left;" class="tx_mailform_label_navi_nextpage">###OUTPUT_LABEL###</div>
+<div class="tx_mailform_nextpage">
+<input class="tx_mailform_navi_nextpage" type="submit" name="###OUTPUT_FORMNAME###" value="###OUTPUT_FORMVALUE###" />
+###OUTPUT_FORMELEMENT###</div>
+</div>
+###END_NAVI_NEXTPAGE###
+
+
+###NAVI_PREVIOUSPAGE###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###">
+<div style="width:200px;float:left;" class="tx_mailform_label_navi_previouspage">###OUTPUT_LABEL###</div>
+<div class="tx_mailform_previouspage">
+<input class="tx_mailform_navi_previouspage" type="submit" name="###OUTPUT_FORMNAME###" value="###OUTPUT_FORMVALUE###" />
+###OUTPUT_FORMELEMENT###</div>
+</div>
+###END_NAVI_PREVIOUSPAGE###
+
+###NAVI_RESET###
+<div id="###OUTPUT_FIELD_ID###" class="###OUTPUT_EXTRA_CSS###">
+<div class="tx_mailform_label_navi_reset">###OUTPUT_LABEL###</div>
+<div class="tx_mailform_reset">###OUTPUT_FORMELEMENT###</div>
+</div>
+###END_NAVI_RESET###

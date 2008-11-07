@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'mailform'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tt_content.tx_mailform_config">Mailform Wizard</label>
+			<label index="tt_content.tx_mailform_mails">Mails</label>
+			<label index="tt_content.tx_mailform_stats">Statistics</label>
+			<label index="tt_content.list_type_pi1">Mailform</label>
+			<label index="tt_content.client_mail_config">Visitor Mail</label>
+			<label index="tt_content.admin_mail_config">Administration Mail</label>
+			<label index="tt_content.general_title">Mailform</label>
+			<label index="tt_content.recipient">Recipient</label>
+			<label index="tt_content.mail_subject">Subject</label>
+			<label index="tt_content.mail_header">Mail Header</label>
+			<label index="tt_content.hide_form_data">Hide the formular data</label>
+			<label index="tt_content.mail_footer">Mail Footer</label>
+			<label index="tt_content.thanks_page">Thanks Page - HTML input</label>
+			<label index="tt_content.sender">Sender email</label>
+			<label index="tt_content.senderName">Sender name</label>
+			<label index="tt_content.htmlMail">HTML Mail</label>
+			<label index="tt_content.FE_email_dir">FE-User recipient</label>
+			<label index="tt_content.enableXajax">Enable xajax</label>
+			<label index="tt_content.fieldTemplatePath">Template Root (Preferred if not empty)</label>
+			<label index="tt_content.fieldCssPath">CSS Root (Preferred if not empty)</label>
+			<label index="tt_content.cssmail_path">Mail-CSS Root (Preferred if not empty)</label>
+			<label index="tt_content.allowStandardTemplate">Allow the extension standard template</label>
+			<label index="tt_content.pages_reference">For Thanks-Page redirect to</label>
+			<label index="tt_content.display_type">Sending options: Thanks page</label>
+			<label index="tt_content.use_ext_html">Use HTML-Input below</label>
+			<label index="tt_content.page_contains_form">This Page contains the Formular</label>
+			<label index="tt_content.page_contains_thankspage">Redirect to the following page-reference</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tt_content.tx_mailform_config">Mailform Wizard</label>
+			<label index="tt_content.tx_mailform_mails">E-Mails</label>
+			<label index="tt_content.tx_mailform_stats">Statistik</label>
+			<label index="tt_content.list_type_pi1">Mailformular</label>
+			<label index="tt_content.client_mail_config">Besucher Mail</label>
+			<label index="tt_content.admin_mail_config">Administrations Mail</label>
+			<label index="tt_content.recipient">Empfänger</label>
+			<label index="tt_content.general_title">Mailformular</label>
+			<label index="tt_content.mail_subject">Betreff</label>
+			<label index="tt_content.mail_header">Mail Kopfteil</label>
+			<label index="tt_content.hide_form_data">Verstecke die Formulardaten im Email</label>
+			<label index="tt_content.mail_footer">Mail Fussteil</label>
+			<label index="tt_content.thanks_page">Dankesseite - HTML-Eingabe</label>
+			<label index="tt_content.sender">Absender Email</label>
+			<label index="tt_content.htmlMail">HTML Mail</label>
+			<label index="tt_content.senderName">Absender Name</label>
+			<label index="tt_content.FE_email_dir">FE-User Empfänger</label>
+			<label index="tt_content.enableXajax">Xajax aktivieren</label>
+			<label index="tt_content.fieldTemplatePath">Template Pfad (Wenn nicht leer bevorzugt)</label>
+			<label index="tt_content.fieldCssPath">CSS Pfad (Wenn nicht leer bevorzugt)</label>
+			<label index="tt_content.cssmail_path">E-Mail-CSS Pfad (Wenn nicht leer bevorzugt)</label>
+			<label index="tt_content.allowStandardTemplate">Erlaube das Ext. Standard-Template</label>
+			<label index="tt_content.pages_reference">Verweis zur Dankesseite</label>
+			<label index="tt_content.display_type">Sendeoptionen: Dankesseite</label>
+			<label index="tt_content.use_ext_html">Verwende die HTML-Eingabe unterhalb.</label>
+			<label index="tt_content.page_contains_form">Diese Seite enthält das Formular. Unterhalb die Dankesseite verweisen.</label>
+			<label index="tt_content.page_contains_thankspage">Verweise zu unten angegebener Seiten-Referenz</label>
+		</languageKey>
+	</data>
+</T3locallang>

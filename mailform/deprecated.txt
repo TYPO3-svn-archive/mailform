@@ -1,0 +1,38 @@
+/*
+$TCA['tx_mailform_mails'] = Array (
+	'ctrl' => Array (
+		'title' => 'LLL:EXT:mailform/locallang_db.xml:tt_content.tx_mailform_mails',
+		'tstamp' => 'tstamp',
+		'crdate' => 'crdate',
+		'formid' => 'formid',
+		'mailid' => 'mailid',
+		'recipient' => 'recipient',
+		'recipient_admin' => 'recipient_admin',
+		'subject' => 'subject'
+	),
+	'feInterface' => Array (
+		'fe_admin_fieldList' => 'title',
+	)
+);
+
+
+$TCA['tx_mailform_stats'] = Array (
+	'ctrl' => Array (
+		'title' => 'LLL:EXT:mailform/locallang_db.xml:tt_content.tx_mailform_stats',
+		'tstamp' => 'tstamp',
+		'crdate' => 'crdate',
+		'mailid' => 'mailid',
+		'ufid' => 'ufid',
+		'content_blob' => 'content_blob',
+		'content_text' => 'content_text',
+		'content_varchar' => 'content_varchar',
+		'content_int' => 'content_int',
+		'field_type' => 'field_type',
+    'data_type' => 'data_type'
+	),
+	'feInterface' => Array (
+		'fe_admin_fieldList' => 'title',
+	)
+);
+*/
+

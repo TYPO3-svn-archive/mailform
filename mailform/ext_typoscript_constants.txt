@@ -1,0 +1,69 @@
+plugin.mailform {
+
+/*
+*  Do not change the css and template definitions
+*  If you like to change these, change these in your TypoScript Constant editor
+*  The best thing you could do for Templates, copy the template folder in the mailform directory
+*  Put it into fileadmin and set the mailform constants for the template right.
+*/
+	
+	# cat=plugin.mailform//zg; type=string; label= CSS File: Path to CSS File
+	stylesheet = EXT:mailform/template/mailform.css
+	
+	# cat=plugin.mailform//zg; type=string; label= Template File: Path to Template File
+	standard_template = EXT:mailform/template/mailform_fields.tmpl
+	
+	# cat=plugin.mailform//zg; type=string; label= mail CSS File: Path of mail css
+	cssmail_path = EXT:mailform/template/mailform_email.css
+	
+	# cat=plugin.mailform//gfx11; type=string; label= Icon image input 'Ok'
+	img_icon_ok = EXT:mailform/template/icon_ok.gif
+	
+	# cat=plugin.mailform//gfx12; type=boolean; label= Display 'Ok image'
+	img_display_ok = 1
+	
+	# cat=plugin.mailform//gfx21; type=string; label= Icon Image 'input error'
+	img_icon_error = EXT:mailform/template/icon_fatalerror.gif
+	
+	# cat=plugin.mailform//gfx22; type=boolean; label= Display 'Error image'
+	img_display_error = 1
+
+  	# cat=plugin.mailform//gfx31; type=string; label= Icon image 'input required'
+	img_icon_required = EXT:mailform/template/icon_required.gif
+	
+	# cat=plugin.mailform//gfx32; type=boolean; label= Display 'Required image'
+	img_display_required = 1
+	
+	# cat=plugin.mailform//hext1; type=string; label= Choose preferred captcha extension
+	captcha_extension_key = sr_freecap
+	
+	# cat=plugin.mailform//opt10; type=textarea; label= Allowed SQL-Tables for prefilling with SQL
+	option_database_tables = tx_*,tt_*,be_*,fe_*,static_*,pages,pages_*
+	
+	# cat=plugin.mailform//smtp1; type=boolean; label= Activate SMTP
+	mail_use_smtp = 0
+	
+	# cat=plugin.mailform//smtp10; type=string; label= SMTP Server
+	mail_smtp = 
+	
+	# cat=plugin.mailform//smtp15; type=string; label= SMTP Port
+	mail_smtp_port =
+	
+	# cat=plugin.mailform//smtp20; type=string; label= SMTP User
+	mail_smtp_user =
+	
+	# cat=plugin.mailform//smtp30; type=password; label= SMTP Password
+	mail_smtp_password =
+	
+	# cat=plugin.mailform//smtp40; type=string; label= From (mail adress)
+	mail_smtp_from =
+	
+	# cat=plugin.mailform//smtp50; type=string; label= From (name)
+	mail_smtp_from_name =
+	
+	# cat=plugin.mailform//smtp60; type=string; label= Secure (Options: 'ssl', 'tls')
+	mail_smtp_secure =
+	
+	# cat=plugin.mailform//db10; type=string; label= Database Tablename for saving content
+	database_table_name =
+}

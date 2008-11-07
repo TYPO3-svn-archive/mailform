@@ -1,0 +1,218 @@
+hr {
+	color: #3a61bb;
+	height: 1px;
+	border: 0px solid #3a61bb;
+	background-color: #3a61bb;
+}
+
+
+.floated{
+	float:left;
+}
+
+#pages{
+	float:left;
+}
+
+#saveto{
+	clear:both;
+}
+
+.cleared{
+	clear:both;
+}
+
+.whitebg{
+	width:100%;
+	background-color:#FFF;
+	float:left;
+	clear:both;
+}
+
+.graybg{
+	width:100%;
+	background-color:#DDD;
+	float:left;
+	clear:both;
+}
+
+.control{
+	height:100%;
+	float:left;
+	margin-top:8px;
+	padding:5px;
+	line-height:20px;
+}
+
+.control INPUT{
+	padding:2px;
+}
+
+input, textarea, select{
+	margin-right: 8px;
+	border: 1px solid #717180;
+	font-size: 11px;
+}
+
+.elementContainer{
+    float:left;
+}
+.MainRow{
+    clear:both;
+}
+.OR{
+	font-weight:bold;
+	color: red;
+	margin-right:8px;
+}
+
+
+#pagemenu {
+	float:left;
+	padding:5px;
+	clear:both;
+}
+
+td.subPartTypeFormTitle {
+	font-weight:bold;
+	color: #000;
+	height: 25px;
+	border: 1px solid #FFF;
+	background-color:#D0E2FF;
+	font-size: 11px;
+}
+
+tr.subPartTypeForm {
+	height: 12px;
+}
+
+td.subPartTypeForm_Label {
+	border: 1px solid #FFF;
+	width: 180px;
+}
+
+td.subPartTypeForm {
+	border: 1px solid #FFFFFF;
+}
+
+table.subPartTypeForm {
+	background-color: #E6E7ED;
+	border-collapse: collapse;
+	width:100%;
+}
+
+/* New Wizard Form Layout */
+
+.wizard-field-table {
+	border: 0px none #FFF;
+}
+
+.wizard-form-preview-table {
+	margin: 3px;
+	background-color: #e3e3f1;
+	border: 1px solid #c9c9da;
+	padding-top: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	width: 95%;
+}
+
+.wizard-form-preview-table-active {
+	margin: 3px;
+	background-color: #fcf2eb;
+	padding-top: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	border: 1px solid #c87c45;
+	width: 95%;
+}
+
+.wizard-field-navigation {
+	background-color: #d9dbe1;
+	border-bottom: 1px solid #949eb5;
+	height: 15px;
+}
+
+.wizard-field-body {
+	
+}
+
+#fieldWizard-table {
+	width: 100%;
+}
+
+.fieldWizard-title {
+	background-color: #B6C5E9;
+	padding-left: 10px;
+	height: 20px;
+}
+#fieldWizard-title_text {
+	font-size: 0.8em;
+	font-weight: bold;
+	color: #3E4049;
+}
+
+img.fWiz_titleLink_img {
+	border: 1px solid #8891A7;
+	padding: 1px;
+	background-color: #FFF;
+}
+
+#fieldWizard-navigation {
+	color: #F00;
+	font-weight: bold;
+	background-color: #b0c2ef;
+}
+
+#fieldWizard-content {
+	background-color: #dae4fc;
+}
+
+/* Wizard Classes */
+
+.wiz_Table_Navi_Outer {
+	border: 1px solid #777;
+	background-color: #bdc0d8;
+}
+
+.wiz_Table_Navi_TOPLEFT {
+}
+
+.wiz_Table_Navi_TOP_Repeat {
+}
+
+.wiz_Table_Navi_TOPRIGHT {
+}
+
+.wiz_Table_Navi_LEFT_Repeat {
+	text-align:center;
+	vertical-align:middle;
+}
+
+.wiz_Table_Navi_RIGHT_Repeat {
+	text-align:center;
+	vertical-align:middle;
+}
+
+.wiz_Table_Cell {
+
+}
+
+.wiz_Table_Navi_BOTTOMLEFT {
+}
+
+.wiz_Table_Navi_BOTTOM_Repeat {
+}
+
+.wiz_Table_Navi_BOTTOMRIGHT {
+}
+
+
+
+
+
+
+
+
+
+

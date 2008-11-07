@@ -1,0 +1,28 @@
+page.includeCSS.mailform = {$plugin.mailform.stylesheet}
+
+plugin.tx_mailform_pi1 {
+	standard_template = {$plugin.mailform.standard_template}
+	stylesheet = {$plugin.mailform.stylesheet}
+	cssmail_path = {$plugin.mailform.cssmail_path}
+	
+	icon_ok = {$plugin.mailform.img_icon_ok}
+	icon_error = {$plugin.mailform.img_icon_error}
+	icon_required = {$plugin.mailform.img_icon_required}
+	
+	icon_display_ok = {$plugin.mailform.img_display_ok}
+	icon_display_error = {$plugin.mailform.img_display_error}
+	icon_display_required = {$plugin.mailform.img_display_required}
+	captcha_extension_key = {$plugin.mailform.captcha_extension_key}
+	option_database_tables = {$plugin.mailform.option_database_tables}
+	
+	mail_use_smtp = {$plugin.mailform.mail_use_smtp}
+	mail_smtp = {$plugin.mailform.mail_smtp}
+	mail_smtp_user = {$plugin.mailform.mail_smtp_user}
+	mail_smtp_password = {$plugin.mailform.mail_smtp_password}
+	mail_smtp_from = {$plugin.mailform.mail_smtp_from}
+	mail_smtp_from_name = {$plugin.mailform.mail_smtp_from_name}
+	mail_smtp_secure = {$plugin.mailform.mail_smtp_secure}
+	mail_smtp_port = {$plugin.mailform.mail_smtp_port}
+	
+	database_table_name = {$plugin.mailform.database_table_name}
+}

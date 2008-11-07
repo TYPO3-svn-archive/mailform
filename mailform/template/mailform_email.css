@@ -1,0 +1,30 @@
+body	{
+		font-family: verdana, arial;
+	}
+
+table	{
+		background-color: #FFFFFF; font-size: 11px;
+	}
+		
+td	{	
+		border-bottom: 0px #000000 none;
+	}
+		
+.pageHeader {
+		background-color: #FFFFFF;
+		font-weight: none;
+		height: 45px;
+	}
+	
+.mailContent {
+		font-weight: normal; font-align: left;
+	}
+.mailLabel {
+		font-weight: bold; width: 200px;
+	}
+.mainTable {
+		background-color: #FEFEFE; font-size: 11px; border:0px none #FFF;
+	}
+.bottomBorder {
+		border-bottom: 1px solid #000000;
+	}
