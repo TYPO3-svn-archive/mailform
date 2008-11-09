@@ -44,7 +44,183 @@ abstract class tx_mailform_formAbstract_BE extends tx_mailform_formAbstract_Stat
 	public function isFormSingleUse() {
 		return $this->singleUse;
 	}
+
+	/**
+	 * get BE_Preview
+	 *
+	 * @return String
+	 */
+	public function getBE_Preview($table) {
+		global $LANG;
+		require_once(t3lib_extMgm::extPath('mailform')."lib/layout/table/class.tx_mailform_table.php");
+		require_once(t3lib_extMgm::extPath('mailform')."lib/layout/form/class.tx_mailform_input.php");
+
+		$row = new tx_mailform_tr();
+
+		$col = new tx_mailform_td();
+		if(!$this->isFormReferenceUsed()) {
+			$col->setContent('<img style="cursor:help;" src="../gfx/no_reference.gif" onmouseover="return overlib(\''.$LANG->getLL('fWiz_reference_not_set').'\');" onmouseout="return nd();">');
+		} else
+			$col->setContent('<img style="cursor:help;" src="../gfx/reference_ok.gif" onmouseover="return overlib(\''.$LANG->getLL('fWiz_reference_ok').'\');" onmouseout="return nd();">');
+
+		$col->setWidth('15');
+		$row->addTd($col);
+
+		$col = new tx_mailform_td();
+		$col->setContent('['.$this->configData['uName'].']');
+		$col->setWidth('140');
+		$row->addTd($col);
+
+		$col = new tx_mailform_td();
+		$lbl = $this->configData['label'] != "" ? $this->configData['label'] : '['.$this->getLLOfFormType().']';
+		$col->setContent($lbl);
+		$col->setWidth(200);
+		$row->addTd($col);
+
+		$col = new tx_mailform_td();
+			$innerTable = new tx_mailform_table();
+			$innerTable->setCellpadding(1);
+			$innerTable->setCellspacing(0);
+			$innerTable->setWidth("100%");
+			$innerTable->setBorder(false);
+			$iRow = new tx_mailform_tr();
+			$iCol = new tx_mailform_td();
+			$iCol->setContent($this->getStatusImageFEMAIL());
+			$iCol->setWidth("10px");
+			$iRow->addTd($iCol);
+			$iCol = new tx_mailform_td();
+			$iCol->setContent($this->getStatusImageInfo());
+			$iCol->setWidth("10px");
+			$iRow->addTd($iCol);
+			$iCol = new tx_mailform_td();
+			$iCol->setContent('['.$this->getLLOfFormType().']');
+			$iRow->addTd($iCol);
+			$innerTable->addRow($iRow);
+			
+		$col->setContent($innerTable->getElementRendered());
+		$col->setWidth(200);
+		$row->addTd($col);
+		
+		$col = new tx_mailform_td();
+		$col->setAlign('right');
+		$urlHandler = new tx_mailform_urlHandler();
+		$col->setContent('	<a href="'.$urlHandler->getCurrentUrl(array_merge(tx_mailform_wizard::getVars(), array('edtField', 'listFields'))).'&amp;edtField='.$this->configData['uName'].'"><img src="../gfx/edit2.gif" alt="'.$LANG->getLL('fWiz_edit_field').'" title="'.$LANG->getLL('fWiz_edit_field').'"></a>
+												<a href="'.$urlHandler->getCurrentUrl(array_merge(tx_mailform_wizard::getVars(), array('delField', 'listFields'))).'&amp;delItemFromList='.$this->configData['uName'].'"><img src="../gfx/garbage.gif" alt="'.$LANG->getLL('form_delete_element').'" title="'.$LANG->getLL('form_delete_element').'"></a>');
+		$row->addTd($col);
+
+		$table->addRow($row);
+		return $table;
+	}
+
+	/**
+	 * getLLOfFormType
+	 *
+	 * @param Boolean $type
+	 * @return String
+	 */
+	public function getLLOfFormType($type = false) {
+		global $LANG;
+		if($type != false)
+			$this->configData['type'] = $type;
+
+		$form = new tx_mailform_form();
+		if($form->isValidFormType($this->configData['type']))
+			return $LANG->getLL('forms_type_'.$this->configData['type']);
+		elseif($form->isValidLayoutType($this->configData['type']))
+			return $LANG->getLL('layout_type_'.$this->configData['type']);
+		elseif($form->isValidNaviType($this->configData['type']))
+			return $LANG->getLL('navi_type_'.$this->configData['type']);
+		else
+			return $LANG->getLL('type_not_found');
+	}
 	
+
+	/**
+	 * return the rendered Backend HTML
+	 *
+	 *@return String
+	 */
+	public function getHtml() {
+		if($this->hasInitialized()) {
+			return $this->renderStandardInputs();
+		}
+		else
+			return "Current object has not jet been initialized!";
+	}
+
+	/**
+	 * get BE_Html Preview
+	 *
+	 * @param Int $rowIndex
+	 * @param Int $colIndex
+	 * @param Int $page
+	 * @param Int $fieldIndex
+	 * @param Int $fieldCount
+	 * @return String
+	 */
+	public function getBE_HtmlPreview($rowIndex, $colIndex, $page, $fieldIndex, $fieldCount) {
+		global $LANG;
+		$urlHan = new tx_mailform_urlHandler();
+		$table = new tx_mailform_table();
+		$table->setCellpadding(0);
+		$table->setCellspacing(0);
+		$table->setBorder(false);
+
+		if(isset($_GET['edtField']) && $_GET['edtField'] == $this->configData['uName'])
+			$table->addCssClass('wizard-form-preview-table-active');
+		else
+			$table->addCssClass('wizard-form-preview-table');
+		$row = new tx_mailform_tr();
+		$col = new tx_mailform_td();
+
+		$col->setContent($this->getStatusImageFEMAIL());
+		$col->setWidth('18');
+		$row->addTd($col);
+
+		$col = new tx_mailform_td();
+		$col->setContent($this->getStatusImageInfo());
+		$col->setWidth('18');
+		$row->addTd($col);
+
+		$col = new tx_mailform_td();
+		$label = empty($this->configData['label']) ? "<b>".$LANG->getLL('forms_type').":</b> ".$this->getLLOfFormType()."" : "<b>".$LANG->getLL('forms_label').":</b> ".tx_mailform_funcLib::shortenText($this->configData['label'], 20);
+		$col->setContent('<a href="'.$urlHan->getCurrentUrl(tx_mailform_wizard::getVars()).'&amp;page='.$page.'&amp;edtField='.$this->configData['uName'].'#fieldWizard">'.$label."</a>");
+		$row->addTd($col);
+
+		$col = new tx_mailform_td();
+		$col->setAlign('right');
+
+		if($fieldIndex != 0)
+			$upLink = '<a href="'.$urlHan->getCurrentUrl(tx_mailform_wizard::getVars()).'&amp;page='.$page.'&amp;fMdr='.$rowIndex.'&amp;fMdc='.$colIndex.'&amp;movFormIndex='.$fieldIndex.'&amp;movFormTo='.(intval($fieldIndex)-1).'"><img src="../gfx/button_up.gif" border="0" alt="Feld nach oben verschieben"></a>';
+		else
+			$downLink = '<img src="../gfx/button_empty.gif" border="0" alt="">';
+		if($fieldCount-1 > $fieldIndex)
+			$downLink = '<a href="'.$urlHan->getCurrentUrl(tx_mailform_wizard::getVars()).'&amp;page='.$page.'&amp;fMdr='.$rowIndex.'&amp;fMdc='.$colIndex.'&amp;movFormIndex='.$fieldIndex.'&amp;movFormTo='.(intval($fieldIndex)+1).'"><img src="../gfx/button_down.gif" border="0" alt="Feld nach unten verschieben"></a>';
+		else
+			$downLink = '<img src="../gfx/button_empty.gif" border="0" alt="">';
+
+		$tmfH = tx_mailform_formHandler::getInstance();
+		$addLink = '<a href="'.$urlHan->getCurrentUrl(tx_mailform_wizard::getVars()).'&amp;addFtFieldRow='.$rowIndex.'&amp;addFtFieldCol='.$colIndex.'&amp;newField='.$tmfH->getUniqueFieldName().'&amp;newFieldIndex='.$fieldIndex.'#fieldWizard"><img src="../gfx/new_el.gif" border="0" title="'.$LANG->getLL('fWiz_addField_beneath').'" alt="'.$LANG->getLL('fWiz_addField_beneath').'"></a>';
+
+		$col->setContent($upLink.$downLink.'<a href="'.$urlHan->getCurrentUrl(tx_mailform_wizard::getVars()).'&amp;edtField='.$this->configData['uName'].'#fieldWizard"><img src="../gfx/edit2.gif" border="0" title="'.$LANG->getLL('fWiz_edit_field').'" alt="'.$LANG->getLL('fWiz_edit_field').'"></a>
+											<a href="'.$urlHan->getCurrentUrl(tx_mailform_wizard::getVars()).'&amp;delFfromF='.$fieldIndex.'&amp;fAdr='.$rowIndex.'&amp;fAdc='.$colIndex.'"><img src="../gfx/garbage.gif" border="0" title="'.$LANG->getLL('fWiz_remove_reference').'" alt="'.$LANG->getLL('fWiz_remove_reference').'"></a>'
+											.$addLink	);
+
+		$row->addTd($col);
+		$table->addRow($row);
+
+		$row = new tx_mailform_tr();
+		$col = new tx_mailform_td();
+
+		$col->setContent($content);
+		$col->setColspan(3);
+		$row->addTd($col);
+		$table->addRow($row);
+
+		return $table->getElementRendered();
+	}
+
+		
 	/**
 	 * Render all HTML
 	 *
@@ -205,112 +381,6 @@ abstract class tx_mailform_formAbstract_BE extends tx_mailform_formAbstract_Stat
 		return $table->getElementRendered();
 	}
 	
-
-
-	/**
-	 * get BE_Preview
-	 *
-	 * @return String
-	 */
-	public function getBE_Preview($table) {
-		global $LANG;
-		require_once(t3lib_extMgm::extPath('mailform')."lib/layout/table/class.tx_mailform_table.php");
-		require_once(t3lib_extMgm::extPath('mailform')."lib/layout/form/class.tx_mailform_input.php");
-
-		$row = new tx_mailform_tr();
-
-		$col = new tx_mailform_td();
-		if(!$this->isFormReferenceUsed()) {
-			$col->setContent('<img style="cursor:help;" src="../gfx/no_reference.gif" onmouseover="return overlib(\''.$LANG->getLL('fWiz_reference_not_set').'\');" onmouseout="return nd();">');
-		} else
-			$col->setContent('<img style="cursor:help;" src="../gfx/reference_ok.gif" onmouseover="return overlib(\''.$LANG->getLL('fWiz_reference_ok').'\');" onmouseout="return nd();">');
-
-		$col->setWidth('15');
-		$row->addTd($col);
-
-		$col = new tx_mailform_td();
-		$col->setContent('['.$this->configData['uName'].']');
-		$col->setWidth('140');
-		$row->addTd($col);
-
-		$col = new tx_mailform_td();
-		$lbl = $this->configData['label'] != "" ? $this->configData['label'] : '['.$this->getLLOfFormType().']';
-		$col->setContent($lbl);
-		$col->setWidth(200);
-		$row->addTd($col);
-
-		$col = new tx_mailform_td();
-			$innerTable = new tx_mailform_table();
-			$innerTable->setCellpadding(1);
-			$innerTable->setCellspacing(0);
-			$innerTable->setWidth("100%");
-			$innerTable->setBorder(false);
-			$iRow = new tx_mailform_tr();
-			$iCol = new tx_mailform_td();
-			$iCol->setContent($this->getStatusImageFEMAIL());
-			$iCol->setWidth("10px");
-			$iRow->addTd($iCol);
-			$iCol = new tx_mailform_td();
-			$iCol->setContent($this->getStatusImageInfo());
-			$iCol->setWidth("10px");
-			$iRow->addTd($iCol);
-			$iCol = new tx_mailform_td();
-			$iCol->setContent('['.$this->getLLOfFormType().']');
-			$iRow->addTd($iCol);
-			$innerTable->addRow($iRow);
-			
-		$col->setContent($innerTable->getElementRendered());
-		$col->setWidth(200);
-		$row->addTd($col);
-		
-		$col = new tx_mailform_td();
-		$col->setAlign('right');
-		$urlHandler = new tx_mailform_urlHandler();
-		$col->setContent('	<a href="'.$urlHandler->getCurrentUrl(array_merge(tx_mailform_wizard::getVars(), array('edtField', 'listFields'))).'&amp;edtField='.$this->configData['uName'].'"><img src="../gfx/edit2.gif" alt="'.$LANG->getLL('fWiz_edit_field').'" title="'.$LANG->getLL('fWiz_edit_field').'"></a>
-												<a href="'.$urlHandler->getCurrentUrl(array_merge(tx_mailform_wizard::getVars(), array('delField', 'listFields'))).'&amp;delItemFromList='.$this->configData['uName'].'"><img src="../gfx/garbage.gif" alt="'.$LANG->getLL('form_delete_element').'" title="'.$LANG->getLL('form_delete_element').'"></a>');
-		$row->addTd($col);
-
-		$table->addRow($row);
-		return $table;
-	}
-
-	/**
-	 * getLLOfFormType
-	 *
-	 * @param Boolean $type
-	 * @return String
-	 */
-	public function getLLOfFormType($type = false) {
-		global $LANG;
-		if($type != false)
-			$this->configData['type'] = $type;
-
-		$form = new tx_mailform_form();
-		if($form->isValidFormType($this->configData['type']))
-			return $LANG->getLL('forms_type_'.$this->configData['type']);
-		elseif($form->isValidLayoutType($this->configData['type']))
-			return $LANG->getLL('layout_type_'.$this->configData['type']);
-		elseif($form->isValidNaviType($this->configData['type']))
-			return $LANG->getLL('navi_type_'.$this->configData['type']);
-		else
-			return $LANG->getLL('type_not_found');
-	}
-	
-
-	/**
-	 * return the rendered Backend HTML
-	 *
-	 *@return String
-	 */
-	public function getHtml() {
-		if($this->hasInitialized()) {
-			return $this->renderStandardInputs();
-		}
-		else
-			return "Current object has not jet been initialized!";
-	}
-	
-
 	/**
 	 * get FEBE Status Image
 	 * Returns the URL for Wizard
@@ -330,7 +400,7 @@ abstract class tx_mailform_formAbstract_BE extends tx_mailform_formAbstract_Stat
 			return '../gfx/display_feemail.gif';
 		}
 	}
-
+	
 	/**
 	 * Enter getFEEMAIL_status
 	 *
@@ -353,85 +423,6 @@ abstract class tx_mailform_formAbstract_BE extends tx_mailform_formAbstract_Stat
 
 		return $state;
 	}
-		
-	/**
-	 * get BE_Html Preview
-	 *
-	 * @param Int $rowIndex
-	 * @param Int $colIndex
-	 * @param Int $page
-	 * @param Int $fieldIndex
-	 * @param Int $fieldCount
-	 * @return String
-	 */
-	public function getBE_HtmlPreview($rowIndex, $colIndex, $page, $fieldIndex, $fieldCount) {
-		global $LANG;
-		$urlHan = new tx_mailform_urlHandler();
-		$table = new tx_mailform_table();
-		$table->setCellpadding(0);
-		$table->setCellspacing(0);
-		$table->setBorder(false);
-
-		if(isset($_GET['edtField']) && $_GET['edtField'] == $this->configData['uName'])
-			$table->addCssClass('wizard-form-preview-table-active');
-		else
-			$table->addCssClass('wizard-form-preview-table');
-		$row = new tx_mailform_tr();
-		$col = new tx_mailform_td();
-
-		
-		//$popup_info .= $this->getFEEMAIL_status();
-
-		//$popup_info = '<b>'.$LANG->getLL('forms_type').'</b>:'.$this->getLLOfFormType().'<br><b>'.$LANG->getLL('info_label_key').'</b> ['.$this->configData['uName'].']<br>';
-
-		$col->setContent($this->getStatusImageFEMAIL());
-		$col->setWidth('18');
-		$row->addTd($col);
-
-		$col = new tx_mailform_td();
-		$col->setContent($this->getStatusImageInfo());
-		$col->setWidth('18');
-		$row->addTd($col);
-
-		$col = new tx_mailform_td();
-		$label = empty($this->configData['label']) ? "<b>".$LANG->getLL('forms_type').":</b> ".$this->getLLOfFormType()."" : "<b>".$LANG->getLL('forms_label').":</b> ".tx_mailform_funcLib::shortenText($this->configData['label'], 20);
-		$col->setContent('<a href="'.$urlHan->getCurrentUrl(tx_mailform_wizard::getVars()).'&amp;page='.$page.'&amp;edtField='.$this->configData['uName'].'#fieldWizard">'.$label."</a>");
-		$row->addTd($col);
-
-		$col = new tx_mailform_td();
-		$col->setAlign('right');
-
-		if($fieldIndex != 0)
-			$upLink = '<a href="'.$urlHan->getCurrentUrl(tx_mailform_wizard::getVars()).'&amp;page='.$page.'&amp;fMdr='.$rowIndex.'&amp;fMdc='.$colIndex.'&amp;movFormIndex='.$fieldIndex.'&amp;movFormTo='.(intval($fieldIndex)-1).'"><img src="../gfx/button_up.gif" border="0" alt="Feld nach oben verschieben"></a>';
-		else
-			$downLink = '<img src="../gfx/button_empty.gif" border="0" alt="">';
-		if($fieldCount-1 > $fieldIndex)
-			$downLink = '<a href="'.$urlHan->getCurrentUrl(tx_mailform_wizard::getVars()).'&amp;page='.$page.'&amp;fMdr='.$rowIndex.'&amp;fMdc='.$colIndex.'&amp;movFormIndex='.$fieldIndex.'&amp;movFormTo='.(intval($fieldIndex)+1).'"><img src="../gfx/button_down.gif" border="0" alt="Feld nach unten verschieben"></a>';
-		else
-			$downLink = '<img src="../gfx/button_empty.gif" border="0" alt="">';
-
-		$tmfH = tx_mailform_formHandler::getInstance();
-		$addLink = '<a href="'.$urlHan->getCurrentUrl(tx_mailform_wizard::getVars()).'&amp;addFtFieldRow='.$rowIndex.'&amp;addFtFieldCol='.$colIndex.'&amp;newField='.$tmfH->getUniqueFieldName().'&amp;newFieldIndex='.$fieldIndex.'#fieldWizard"><img src="../gfx/new_el.gif" border="0" title="'.$LANG->getLL('fWiz_addField_beneath').'" alt="'.$LANG->getLL('fWiz_addField_beneath').'"></a>';
-
-		$col->setContent($upLink.$downLink.'
-																				<a href="'.$urlHan->getCurrentUrl(tx_mailform_wizard::getVars()).'&amp;edtField='.$this->configData['uName'].'#fieldWizard"><img src="../gfx/edit2.gif" border="0" title="'.$LANG->getLL('fWiz_edit_field').'" alt="'.$LANG->getLL('fWiz_edit_field').'"></a>
-																				<a href="'.$urlHan->getCurrentUrl(tx_mailform_wizard::getVars()).'&amp;delFfromF='.$fieldIndex.'&amp;fAdr='.$rowIndex.'&amp;fAdc='.$colIndex.'"><img src="../gfx/garbage.gif" border="0" title="'.$LANG->getLL('fWiz_remove_reference').'" alt="'.$LANG->getLL('fWiz_remove_reference').'"></a>'
-											.$addLink	);
-
-		$row->addTd($col);
-		$table->addRow($row);
-
-		$row = new tx_mailform_tr();
-		$col = new tx_mailform_td();
-
-		$col->setContent($content);
-		$col->setColspan(3);
-		$row->addTd($col);
-		$table->addRow($row);
-
-		return $table->getElementRendered();
-	}
-	
 	
 	/**
 	 * Render HTML, implemented in Each Fieldtype

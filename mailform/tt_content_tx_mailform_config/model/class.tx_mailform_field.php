@@ -22,6 +22,7 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 require_once(t3lib_extMgm::extPath('mailform')."lib/layout/div/class.tx_mailform_div.php");
+require_once(t3lib_extMgm::extPath('mailform')."lib/layout/form/class.tx_mailform_select.php");
 require_once(t3lib_extMgm::extPath('mailform')."lib/templateParser/class.tx_mailform_parseEngine.php");
 /**
  * Class tx_mailform_field
@@ -150,7 +151,7 @@ class tx_mailform_field {
 		return '
 		<table width="100%" cellpadding="0" cellspacing="0" border="0" class="wizard-field-table">
 			<tr>
-				<td valign="top" align="left" class="wizard-field-navigation"><!-- Navigation Element -->'.$this->getWizNaviElement().'<!-- END Navigation Element --></td>
+				<td valign="top" align="left" class="wizard-field-navigation" style="min-width:75px;"><!-- Navigation Element -->'.$this->getWizNaviElement().'<!-- END Navigation Element --></td>
 				<td valign="top" align="right" class="wizard-field-navigation">'.$fieldInfo.'</td>
 			</tr>
 			'.$this->getEditFieldElement().'
@@ -467,20 +468,39 @@ class tx_mailform_field {
 		return $this->colIndex;
 	}
 	
+	/**
+	 * Sets the Condition string
+	 *
+	 * @param String $string
+	 */
 	public function setCondition($string) {
 		$this->condition = $string;
 	}
 	
+	/**
+	 * Get the condition string (needs to be parsed with parseEngine)
+	 *
+	 * @return String
+	 */
 	public function getCondition() {
 		return $this->condition;
 	}
 	
+	/**
+	 * Set if the field uses condition
+	 *
+	 * @param Boolean $boolean
+	 */
 	public function setConditionActivated($boolean) {
 		$this->conditionActivated = $boolean;
 	}
 	
+	/**
+	 * Get boolean if the field has conditions whether to display or not
+	 *
+	 * @return Boolean
+	 */
 	public function getConditionActivated() {
-		return $this->conditionActivated;
 		if($this->conditionActivated || strlen($this->conditionActivated) > 0)
 			return true;
 		else
@@ -559,6 +579,12 @@ class tx_mailform_field {
 		tx_mailform_funcLib::sortArrayWithAscIndex($this->formElement);
 	}
 	
+	/**
+	 * switch positions of a field $fromCurrId to $fromTargetId
+	 *
+	 * @param Integer $formCurrId
+	 * @param Integer $formTargetId
+	 */
 	public function moveFormInField($formCurrId, $formTargetId) {
 		$curr = $this->formElement[$formCurrId];
 		$tmp = $this->formElement[$formTargetId];
@@ -567,14 +593,21 @@ class tx_mailform_field {
 		$this->formElement[$formCurrId] = $tmp;
 	}
 	
+	/**
+	 * get all form elements of this field
+	 *
+	 * @return Array
+	 */
 	public function getFormElements() {
 		return $this->formElement;
 	}
 	
+	/**
+	 * get current config data of this field
+	 *
+	 * @return Array
+	 */
 	public function getConfigData() {
-		
-	//	throw new Exception();
-		
 		$pref = 'field_config_';
 		$plcIndex = ($this->placeHolder) ? tx_mailform_funcLib::convertToCSV($this->placeHolder) : "";
 
