@@ -199,7 +199,7 @@ class tx_mailform_tt_content_tx_mailform_configwiz extends t3lib_SCbase {
 	 * @return	void
 	 */
 	public function init() {
-		global $BACK_PATH, $LANG, $EXT, $BE_Handler;
+		global $BACK_PATH, $LANG, $EXT, $BE_Handler,$TYPO3_GLOBAL_VARS;
 
 		$EXT['ext_key'] = "mailform";
 		
@@ -220,6 +220,8 @@ class tx_mailform_tt_content_tx_mailform_configwiz extends t3lib_SCbase {
 		$BE_Handler->Pageinfo = t3lib_BEfunc::readPageAccess($this->id,$BE_Handler->Perms_clause);
 		
 		// Create an instance of the document template object
+		t3lib_div::debug($TYPO3_GLOBAL_VARS);
+		
 		$this->doc = $GLOBALS['TBE_TEMPLATE'];
 		$this->doc->backPath = $BACK_PATH;
 		$this->doc->setModuleTemplate('templates/alt_doc.html');
@@ -257,7 +259,6 @@ class tx_mailform_tt_content_tx_mailform_configwiz extends t3lib_SCbase {
 			</div>
 			<div id="typo3-docbody">';
 
-		
 		$this->setModuleContent();
 		
 		$this->content .= '</div>';
